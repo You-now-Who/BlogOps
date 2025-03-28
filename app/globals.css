@@ -1,26 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @import "tailwindcss";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Lora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&display=swap'); */
+
+
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* --font-heading: 'Montserrat';
+  --font-body: 'Lora', serif;
+  --font-roboto: "Roboto", sans-serif;  */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-autumn-green: #706D54;
+  --color-autumn-brown: #A08963;
+  --color-autumn-beige: #C9B194;
+  --color-autumn-grey: #DBDBDB;
+  --font-roboto: "Roboto", sans-serif; 
 }
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #dcdcdc;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body); /* Ensure the body uses the correct font */
+  background-color: #F8F4E3; /* Soft, warm beige */
+  color: #4A3F35; /* Deep brown for contrast */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading); /* Montserrat applied here */
+  color: #A08963;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading); /* Ensure fallback is included */
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
 }
