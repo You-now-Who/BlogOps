@@ -12,8 +12,8 @@ const Navbar = () => {
         <h1 className="font-heading text-3xl">No More Serifs!</h1> {/* Use the custom font-heading class */}
         {/* Nav Links */}
         <ul className="flex space-x-6">
-          <li><a href="#home" className="font-[Roboto] hover:text-[#C9B194]">Home</a></li>
-          <li><a href="#about" className="hover:text-[#C9B194]">About</a></li>
+          <li><a href="#home" className="font-roboto hover:text-[#C9B194]">Really big ass sentence so that I can see if the font changed?</a></li>
+          <li><a href="#about" className="hover:text-[#C9B194]" style={{ fontFamily: "Roboto, sans-serif" }}>About</a></li>
           <li><a href="#blog" className="hover:text-[#C9B194]">Blog</a></li>
           <li><a href="#contact" className="hover:text-[#C9B194]">Contact</a></li>
         </ul>
