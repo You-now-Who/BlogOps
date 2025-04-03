@@ -28,6 +28,7 @@
   --color-autumn-brown: #A08963;
   --color-autumn-beige: #C9B194;
   --color-autumn-grey: #DBDBDB;
+  --color-autumn-black: #5e5e5e;;
   /* --font-roboto: "Roboto", sans-serif;  */
 }
 
@@ -35,7 +36,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+    --background: #303030;
     --foreground: #dcdcdc;
   }
 }

@@ -20,7 +20,7 @@ const playfairDisplay = Playfair_Display({
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: "400",
+  weight: "300",
   subsets: ["latin"],
 })  
 

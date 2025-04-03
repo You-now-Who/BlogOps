@@ -1,18 +1,34 @@
 import React from "react";
 import Image from "next/image";
+import BlogButton from "../ui/BlogButton";
 
 function FeaturedBlog() {
   return (
     <>
       <div className="m-5 h-full justify-between flex flex-row">
-        
-            <div className="flex flex-col w-1/2 justify-center items-center">
-            <h1 className="font-bold text-4xl mb-10 text-white"> Coffee to taste</h1>
-            <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum iste quis vitae natus recusandae excepturi laudantium sed vel a odio dignissimos qui aliquam sit autem soluta, iusto blanditiis enim possimus?</p>
-            </div>
+        <div className="flex flex-col w-1/2 px-10" style={{marginTop: "9%"}}>
+            <h1 className="font-bold text-5xl mb-10 text-white">
+              {" "}
+              Lorem ipsum dolor sit amet.
+            </h1>
+            <p className="text-autumn-black mt-5">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+              iste quis vitae natus recusandae excepturi laudantium sed vel a
+              odio dignissimos qui aliquam sit autem soluta, iusto blanditiis
+              enim possimus?
+            </p>
+            <p className="text-autumn-black mt-5">
+              
+              Exercitationem unde earum facilis, distinctio vel iure sit autem quasi vero fuga. Ducimus eaque architecto exercitationem? Sapiente similique dolore magni?
+            </p>
+
+            <a href="#" className="bg-black text-white py-2 px-4 mt-10 rounded-sm hover:bg-gray-800 w-fit">
+            READ MORE
+            </a>
+        </div>
         <div className="w-1/2">
           <Image
-            className="w-3/4 h-auto rounded-sm"
+            className="w-3/4 h-auto rounded-sm shadow-2xl"
             style={{ marginTop: "18%", marginLeft: "10%" }}
             height={0}
             width={0}
