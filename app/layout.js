@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 
@@ -12,10 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  weight: "400",
   subsets: ["latin"],
 })
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: "400",
+  subsets: ["latin"],
+})  
 
 export const metadata = {
   title: "Blogify",
@@ -26,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${poppins.className} ${playfairDisplay.className} ${geistMono.className} antialiased`}
       >
         <NavBar></NavBar>
         {children}

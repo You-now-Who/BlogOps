@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
 
 @import "tailwindcss";
 
@@ -16,6 +16,8 @@
   /* --font-heading: 'Montserrat';
   --font-body: 'Lora', serif;
   --font-roboto: "Roboto", sans-serif;  */
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Playfair Display', sans-serif;
 }
 
 @theme {
@@ -25,7 +27,7 @@
   --color-autumn-brown: #A08963;
   --color-autumn-beige: #C9B194;
   --color-autumn-grey: #DBDBDB;
-  --font-roboto: "Roboto", sans-serif; 
+  /* --font-roboto: "Roboto", sans-serif;  */
 }
 
 
@@ -46,7 +48,7 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading); /* Montserrat applied here */
   color: #A08963;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.5px;
 }
 
@@ -57,4 +59,14 @@ h1, h2, h3 {
   .font-body {
     font-family: var(--font-body);
   }
+}
+
+.bg-box {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 33%;
+  background-color: #706D54;
+  height: 100%;
+  z-index: -1;
 }
