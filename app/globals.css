@@ -23,7 +23,7 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-autumn-white: #dcdcdc;
+  --color-autumn-white: #fffefa;
   --color-autumn-green: #706D54;
   --color-autumn-brown: #A08963;
   --color-autumn-beige: #C9B194;
@@ -45,6 +45,7 @@ body {
   font-family: var(--font-body); /* Ensure the body uses the correct font */
   background-color: #f8f6ee; /* Soft, warm beige */
   color: #4A3F35; /* Deep brown for contrast */
+  /* color: #fffefa; */
 }
 
 h1, h2, h3 {
