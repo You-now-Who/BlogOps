@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FeaturedBlog from "./components/home/FeaturedBlog";
+import IntroHero from "./components/home/IntroHero";
 
 export default function Home() {
   return (
@@ -9,8 +10,14 @@ export default function Home() {
       <div className="h-screen">
         <FeaturedBlog />
       </div>
-      <div className="h-screen bg-amber-200">
-        <p>VILLAN GOES HERE LOL</p>
+      {/* <hr /> */}
+      <div className="">
+        <IntroHero/>
+      </div>
+      <hr className="mx-20 border-autumn-beige border-2 rounded-lg"/>
+      {/* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
+      <div className="h-screen bg-gradient-to-b from-[#fdf1e1] to-[#f8f6ee]">
+
       </div>
     </div>
   );
