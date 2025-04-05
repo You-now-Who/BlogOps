@@ -2,8 +2,8 @@ import React from 'react';
 
 function Form() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form className="bg-white p-6 rounded shadow-md w-full max-w-lg">
+    <div className="flex items-center justify-center min-h-screen">
+      <form className="bg-autumn-white p-6 rounded shadow-md w-full max-w-lg">
         <h1 className="text-2xl font-bold mb-4">Create a New Post</h1>
         
         <div className="mb-4">
