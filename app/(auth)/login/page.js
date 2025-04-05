@@ -6,9 +6,23 @@ function page() {
   const [message, setMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage('Access Granted');
+    const res = await fetch("/api/authenticate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({password})
+    })
+    
+    if (!res.ok){
+        setMessage("Wrong codes!!! Access Denied")
+    }
+
+    else {
+        setMessage("Access granted! Redirecting...")
+    }
   };
 
   return (
