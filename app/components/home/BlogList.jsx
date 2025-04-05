@@ -63,46 +63,51 @@ function BlogList(props) {
     ];
 
     return (
-        <div className="flex overflow-x-auto space-x-5 p-5 mx-10">
-            {blogs.map((blog, index) => (
-                <div
-                    key={index}
-                    className="min-w-[300px] rounded-lg p-5 flex flex-col justify-between"
-                >
-                    <Image
-                        className="rounded-md mb-3 w-full transform transition-transform duration-300 hover:scale-105 hover:rotate-1 hover:shadow-lg shadow-sm"
-                        src={blog.image}
-                        alt={blog.title}
-                        width={300}
-                        height={300}
-                    />
-                    <div>
-                        <h2 className="font-bold text-xl mb-3 text-black">
-                            {blog.title}
-                        </h2>
-                        <div className="flex flex-row gap-2 mb-3 flex-wrap">
-                            {blog.tags.map((tag, idx) => (
-                                <span
-                                    key={idx}
-                                    className="bg-gray-200 text-black py-1 px-2 rounded-full text-xs"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
+        <>
+            <div className="flex flex-col justify-start mx-10 mt-10">
+                <h1 className="text-3xl font-bold text-center my-5 self-start mx-10">My Blogs:</h1>
+                <div className="flex overflow-x-auto space-x-5 p-5">
+                    {blogs.map((blog, index) => (
+                        <div
+                            key={index}
+                            className="min-w-[300px] rounded-lg p-5 flex flex-col justify-between"
+                        >
+                            <Image
+                                className="rounded-md mb-3 w-full transform transition-transform duration-300 hover:scale-105 hover:rotate-1 hover:shadow-lg shadow-sm"
+                                src={blog.image}
+                                alt={blog.title}
+                                width={300}
+                                height={300}
+                            />
+                            <div>
+                                <h2 className="font-bold text-xl mb-3 text-black">
+                                    {blog.title}
+                                </h2>
+                                <div className="flex flex-row gap-2 mb-3 flex-wrap">
+                                    {blog.tags.map((tag, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="bg-gray-200 text-black py-1 px-2 rounded-full text-xs"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <p className="text-autumn-black text-sm">
+                                    {blog.content.slice(0, 300)}...
+                                </p>
+                            </div>
+                            <Link
+                                href={`/blog/${index}`}
+                                className="bg-black text-white py-2 px-4 mt-5 rounded-sm hover:bg-gray-800 w-fit self-start"
+                            >
+                                READ MORE
+                            </Link>
                         </div>
-                        <p className="text-autumn-black text-sm">
-                            {blog.content.slice(0, 300)}...
-                        </p>
-                    </div>
-                    <Link
-                        href={`/blog/${index}`}
-                        className="bg-black text-white py-2 px-4 mt-5 rounded-sm hover:bg-gray-800 w-fit self-start"
-                    >
-                        READ MORE
-                    </Link>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </div>
+        </>
     );
 }
 

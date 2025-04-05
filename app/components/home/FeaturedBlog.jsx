@@ -5,33 +5,52 @@ import BlogButton from "../ui/BlogButton";
 function FeaturedBlog() {
   return (
     <>
-      <div className="m-5 h-full justify-between flex flex-row">
-        <div className="flex flex-col w-1/2 px-10" style={{marginTop: "9%"}}>
-            <h1 className="font-bold text-5xl mb-3 text-white">
-              {" "}
-              Lorem ipsum dolor sit amet.
-            </h1>
-            <p className="text-autumn-grey text-sm">Read Time: <span className="font-bold">10 mins</span> </p>
-            <div className="flex flex-row gap-2 mb-5 mt-5">
-                <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">#Technology</span>
-                <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">#Programming</span>
-                <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">#Pizza</span>
-            </div>
-            <p className="text-autumn-black mt-5">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-              iste quis vitae natus recusandae excepturi laudantium sed vel a
-              odio dignissimos qui aliquam sit autem soluta, iusto blanditiis
-              enim possimus?
-            </p>
-            <p className="text-autumn-black mt-5">
-              
-              Exercitationem unde earum facilis, distinctio vel iure sit autem quasi vero fuga. Ducimus eaque architecto exercitationem? Sapiente similique dolore magni?
-            </p>
+      <div className="relative m-5 h-full justify-between flex flex-row">
+        <div className="concentric-circles">
+          <div className="circle small"></div>
+          <div className="circle medium"></div>
+          <div className="circle large"></div>
+        </div>
+        <div
+          className="relative flex flex-col w-1/2 px-10"
+          style={{ marginTop: "9%" }}
+        >
+          <h1 className="font-bold text-5xl mb-3 text-white">
+            {" "}
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p className="text-autumn-grey text-sm">
+            Read Time: <span className="font-bold">10 mins</span>{" "}
+          </p>
+          <div className="flex flex-row gap-2 mb-5 mt-5">
+            <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">
+              #Technology
+            </span>
+            <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">
+              #Programming
+            </span>
+            <span className="bg-gray-200 text-black py-1 px-3 rounded-full text-sm">
+              #Pizza
+            </span>
+          </div>
+          <p className="text-autumn-black mt-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum iste
+            quis vitae natus recusandae excepturi laudantium sed vel a odio
+            dignissimos qui aliquam sit autem soluta, iusto blanditiis enim
+            possimus?
+          </p>
+          <p className="text-autumn-black mt-5">
+            Exercitationem unde earum facilis, distinctio vel iure sit autem
+            quasi vero fuga. Ducimus eaque architecto exercitationem? Sapiente
+            similique dolore magni?
+          </p>
 
-            <a href="#" className="bg-black text-white py-2 px-4 mt-10 rounded-sm hover:bg-gray-800 w-fit">
+          <a
+            href="#"
+            className="bg-black text-white py-2 px-4 mt-10 rounded-sm hover:bg-gray-800 w-fit"
+          >
             READ MORE
-            </a>
-            
+          </a>
         </div>
         <div className="w-1/2">
           <Image

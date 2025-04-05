@@ -38,7 +38,7 @@ function BlogPage() {
                 {blog.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="bg-[var(--color-autumn-beige)] text-[var(--color-autumn-black)] text-xs font-roboto px-3 py-1 rounded-full"
+                    className="bg-[var(--color-autumn-brown)] text-[var(--color-autumn-white)] text-xs font-roboto px-3 py-1 rounded-full"
                   >
                     {tag}
                   </span>
