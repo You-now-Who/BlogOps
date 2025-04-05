@@ -1,9 +1,8 @@
-import NavBar from "./components/NavBar";
+"use client"
 
 export default function RootLayout({ children }) {
   return (
     <>
-      <NavBar></NavBar>
       {children}
     </>
   );

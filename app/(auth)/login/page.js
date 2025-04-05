@@ -1,10 +1,23 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/navigation';
 
 function page() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+
+  const router = useRouter()
+
+  useEffect(() => {
+    (async () => { 
+        if (Cookies.get("magic-words") != undefined){
+            console.log('Redirecting')
+            router.push("/")
+        }
+    })()
+  }, [router])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +35,8 @@ function page() {
 
     else {
         setMessage("Access granted! Redirecting...")
+        Cookies.set("magic-words", password, { expires: 7 })
+        console.log(Cookies.get("magic-words"))
     }
   };
 
