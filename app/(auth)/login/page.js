@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 
-function page() {
+function Page() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
@@ -78,4 +78,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
